@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/192b98bb0e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Just Do It!</a>
+            </div>
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <nav>
+                <ul>
+                    <li><a href="#signin">Sign In</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>         
+        </div>
+    </header>
+    
+<div class="container bg-transparent mt-5">
+    <div class="description">
+        <h1 class="page-title">Organize Your Tasks</h1>
+        <p class="page-subtitle">Stay focused, manage your time, and boost 
+            productivity with our intuitive task and timer features.</p>
+    </div>
+    <div class="card" >
+        <div class="card-body">
+            <h1 class="card-title text-center">JUST DO IT !</h1>
+            <div id="maintab" class="text-center mb-3 nav nav-tabs nav-fill">
+                <button id="tasks" class="nav-link btn mx-1" data-bs-toggle="tab" data-bs-target="#tasksect">Tasks</button>
+                <button id="timer" class="nav-link btn mx-1" data-bs-toggle="tab" data-bs-target="#timersect">Timer</button>
+            </div>
+            <section id="tasksect">
+                <div id="newtaskdiv" class="mb-3">
+                    <label for="newtask" id="newtasklabel" class="form-label">Add a task</label>
+                    <div class="d-flex">
+                        <input type="text" id="newtask" class="form-control me-2" placeholder="What would you like to do?">
+                        <button id="newtaskbutton" class="btn btn-success">I got this !</button>            
+                    </div>
+                </div>
+                <div id="tasktab" class="text-center mb-3"><!--make it into a toggle tab-->
+                    <button id="all" class="active">All</button>
+                    <button id="pending">Pending</button>
+                    <button id="completed">Completed</button>
+                </div>
+                <div id="pendingtasks" class="list-group mb-3">
+                    <ul class="task-box"></ul>
+                    <!--list items to be added through js
+                    <li class="list-group-item">
+                        <input type='checkbox' class="form-check-input" checked><span class="task-text">Name of the task</span>
+                        <button class="btn btn-danger btn-sm delete-btn">Delete</button>
+                    </li>
+                    -->
+                </div>
+                <div id="completedtasks" class="list-group mb-3">
+                </div>
+            </section>
+            <!--Visible only on clicking on timer-->
+            <section id="timersect"> 
+                <div id="timertab" class="text-center mb-3"><!--make it into a toggle tab-->
+                    <button id="focus" class="btn btn-outline-danger mx-1">Focus</button>
+                    <button id="shortbreak" class="btn btn-outline-info mx-1">Short Break</button>
+                    <button id="longbreak" class="btn btn-outline-primary mx-1">Long Break</button>
+                </div>
+                <div id="countdown" class="text-center mb-3">
+                    <!--include countdown timer 
+                    25 min for focus
+                    5 min for sb
+                    30 min for lb-->
+                    <span id="timer-label"></span>
+                    <span id="time-left"></span>
+                </div>
+                <div id="timercontrol" class="text-center">
+                    <button id="start" class="btn btn-success mx-1">Start</button>
+                    <button id="stop" class="btn btn-danger mx-1">Stop</button>
+                    <button id="restart" class="btn btn-warning mx-1">Restart</button>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="copyright">&copy; 2024 Sapthami and Aditya. All rights reserved.</div>
+            <div class="social-icons">
+                <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="icon"><i class="fab fa-github"></i></a>
+                <a href="#" class="icon"><i class="fab fa-figma"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="script2.js"></script>
+<audio id="completionSound" src="Audios/Timer Audio.mp3"></audio>
+<video id="fullscreenVideo" controls style="display: none;">
+    <source src="Videos/Timer Video.mp4" type="video/mp4">
+</video>
+
+
+</body>
+</html>
