@@ -1,19 +1,45 @@
-# To-Do List + Pomodoro Timer
+# To‑Do List + Pomodoro Timer
 
-A productivity-focused to-do list web app with an integrated Pomodoro timer. Built using HTML, CSS, and vanilla JavaScript, it helps users manage tasks while staying focused using 25-minute Pomodoro intervals.
+[Live Demo](https://sapthamiu.github.io/to-do-list/)  
+
+A simple productivity app that combines a to‑do list with Pomodoro-style timers—ideal for students and professionals to stay organized and focused.
+
 
 ## Features
 
-- Add, complete, and delete tasks
-- Tasks persist via LocalStorage
-- Built-in Pomodoro timer (25-minute sessions)
-- Start, stop and reset timer buttons
-- Clean and minimal UI
+* Add, complete, and manage tasks across:
 
-## Pomodoro Timer
+  * Completed
+  * Pending
+  * All Tasks
+* Task data is saved using localStorage
+* Pomodoro timers:
 
-The timer is based on the Pomodoro technique — a 25-minute focus session followed by short breaks. Users can track time while working through their to-do list.
+  * 25-min Focus
+  * 10-min Short Break
+  * 30-min Long Break
+* Audio alert on timer completion
 
-> *Future work: custom session lengths, session history*
 
+## Tech Stack
+
+* **HTML, CSS, Bootstrap** – UI layout and styling (my contribution)
+* **JavaScript** – Task logic and timer functionality (by teammate)
+
+
+## My Role
+
+* Designed and implemented the full HTML layout
+* Styled the interface using Bootstrap and custom CSS
+* Ensured basic responsiveness across screen sizes
+* Collaborated with teammate who handled JavaScript logic
+
+
+## Future Improvements
+
+* Persist timer state using localStorage
+* Allow custom timer durations
+* Add dark mode and sound control options
+* Improve responsiveness for small-screen devices
+* Enable push notifications on timer completion
 
