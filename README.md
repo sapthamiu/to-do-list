@@ -1,4 +1,4 @@
-# To‑Do List + Pomodoro Timer
+# Just Do It: To‑Do List + Pomodoro Timer
 
 [Live Demo](https://sapthamiu.github.io/to-do-list/)  
 
